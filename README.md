@@ -1,8 +1,8 @@
-# ID2223Project
+# MomentumBot
 
 ## Description
 
-This repository is a course final project for ID2223 Scalable ML and DL in KTH. And here is the motivation of this project:
+This repo demonstrates scalable machine learning and deep learning. Kinda. The project uses some basic deep learning predictions 
 
 How to manage the cash liquidity is always an important issue for modern human beings. Therefore, we developed one program to predict the profit under specific allocation chosen by the users after a certain period of time. We provided three investment strategies which are Gold, NASDAQ Composite Index, and Bitcoin. We use the LSTM algorithm to make predictions about the price of bank interest rates, gold, S&P 500 (stock market), and BTC (Encrypted currency). The user can input their investment today and get the prediction about their profit or loss in 3 or 6 months (after the inflation index).
 
@@ -37,7 +37,7 @@ Second, we retrieve historical features from Hopsworks and train the first-gener
 
 Then we deploy ***feature-pipeline-daily*** on Modal to update the latest data to Hopsworks every working day. We also realize that, if there is a sufficient amount of new daily data, to avoid Concept Drift, it is necessary to retrain the model. That's why we have ***cyclical-training-pipeline*** to generate and update new models every month.
 
-Finally, we infer and display prediction results by using Gradio app deployed on Hugging Face.
+Finally, infer and display prediction results by using Gradio app deployed on Hugging Face.
 
 ## How to Run
 
@@ -46,11 +46,3 @@ Finally, we infer and display prediction results by using Gradio app deployed on
 3. Create accounts on hopsworks.ai and modal.com, create/cofigure necessary API keys and tokens
 4. Run all *backfill-feature-group.ipynb*, *training-pipeline.ipynb*, *feature-pipeline-daily.py* and *cyclical-training-pipeline*.py in order
 5. Run *investment_ui.py* in folder Gradio to see what will happen =）
-
-## Gradio app
-
-[Investment Predictor System](https://huggingface.co/spaces/Wenjian12581/investment_predictor)
-
-## Contributors
-
-The contributors of this repo are Tianyu Deng and Wenjian Ma.
