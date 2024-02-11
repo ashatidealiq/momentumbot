@@ -2,17 +2,13 @@
 
 ## Description
 
-This repo demonstrates scalable machine learning and deep learning. Kinda. The project uses some basic deep learning predictions 
+This demo project uses a simple Keras model to predict prices for 3 separate asset classes (Gold, NASDAQ Composite Index, and Bitcoin). 
 
-How to manage the cash liquidity is always an important issue for modern human beings. Therefore, we developed one program to predict the profit under specific allocation chosen by the users after a certain period of time. We provided three investment strategies which are Gold, NASDAQ Composite Index, and Bitcoin. We use the LSTM algorithm to make predictions about the price of bank interest rates, gold, S&P 500 (stock market), and BTC (Encrypted currency). The user can input their investment today and get the prediction about their profit or loss in 3 or 6 months (after the inflation index).
+Note: The project primarily demonstrates scalable machine learning and deep learning. I really wouldn't use it to trade. 
 
-To meet the requirement of the course project, we need to:
+The project also uses the LSTM algorithm to make predictions interest rates, gold, S&P 500, and BTC. The user can input their investment today and get the prediction about their profit or loss in 3 or 6 months (after the inflation index).
 
-- Manage dynamic data sources
-- Train models and make predictions
-- Deploy pipelines to build a scalable system
-
-## Technologies
+## Uses
 
 **yfinance**: Crawl Yahoo Finance data to generate data sets
 
