@@ -14,7 +14,7 @@ The project also uses the LSTM algorithm to make predictions interest rates, gol
 
 **LSTM**: Train and predict on time series data
 
-**Hopsworks**: Manage and store features and model registry. Hopsworks is slower to work with than a GCP/AWS/Azure setup but it's free. You can work with it via Jupyter notebooks and it has some nice features for setting up feature groups and sharing across pipelines etc. It's not Azure Data Factory or Azure ML Studio but I like it.
+**Hopsworks**: Manage and store features and model registry. Hopsworks is slower to work with than a GCP/AWS/Azure setup but it's free. You can work with it via Jupyter notebooks and it has some nice features for setting up feature groups and sharing across pipelines etc. It's not Azure Data Factory or Azure ML Studio but I like it. It will save you clicks and $ over Azure.
 
 **Modal**: Periodically execute the program to update remote features and models
 
