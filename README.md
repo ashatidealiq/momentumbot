@@ -4,13 +4,13 @@
 
 This demo project uses a simple Keras model to predict prices for 3 separate asset classes (Gold, NASDAQ Composite Index and Bitcoin). 
 
-Note: The project primarily demonstrates scalable machine learning and deep learning. I really wouldn't use it to trade. 
+The project also uses the LSTM algorithm to make predictions on interest rates, gold, S&P 500, and BTC. There's also a simple GUI where the user can input their investment today and get a 3-6m PNL prediction adjusted for inflation.
 
-The project also uses the LSTM algorithm to make predictions interest rates, gold, S&P 500, and BTC. The user can input their investment today and get the prediction about their profit or loss in 3 or 6 months (after the inflation index).
+Note: This is a demo to highlight scalable machine learning and deep learning. Use it to trade at your own risk. 
 
 ## Uses
 
-**yfinance**: Crawl Yahoo Finance data to generate data sets
+**yfinance**: Crawls Yahoo Finance data to generate data sets
 
 **LSTM**: Train and predict on time series data
 
@@ -27,13 +27,13 @@ The project also uses the LSTM algorithm to make predictions interest rates, gol
 
 First, we use yfinance to implement a tool for crawling Yahoo Finance historical data. We create DataFrames from historical data and create feature groups on Hopsworks through ***backfill-feature-group***.
 
-Second, we retrieve historical features from Hopsworks and train the first-generation models using LSTM and upload the models to Hopsworks file system through ***training-pipeline***. Here is the gold example of our model, this picture shows that the predictions is relatively accurate.
+Second, we retrieve historical features from Hopsworks and train the first-generation models using LSTM and upload the models to Hopsworks file system through ***training-pipeline***. Below is the example for gold. As you can see predictions from deep learning can be surprisingly accurate.
 
 ![output](README.assets/output.png)
 
-Then deploys ***feature-pipeline-daily*** on Modal to update the latest data to Hopsworks every working day. We also realize that, if there is a sufficient amount of new daily data, to avoid concept drift, it is necessary to retrain the model. That's why we have ***cyclical-training-pipeline*** to generate and update new models every month.
+Then we deploy ***feature-pipeline-daily*** on Modal to update the latest data to Hopsworks every working day. If there is a sufficient amount of new daily data it is necessary to retrain the model to avoid concept drift. That's why we have ***cyclical-training-pipeline*** to generate and update new models every month.
 
-Finally, infer and display prediction results by using Gradio app deployed on Hugging Face.
+Finally, infer and display prediction results with a Gradio app deployed on Hugging Face.
 
 ## How to Run
 

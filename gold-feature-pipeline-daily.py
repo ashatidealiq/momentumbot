@@ -54,6 +54,7 @@ def get_daily_update():
     #         print(f'Data for {symbol} updated successfully.')
     # else:
     #     print("No data available for the specified date.")
+    #
 
     return target_data
 
