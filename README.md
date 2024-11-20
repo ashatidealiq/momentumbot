@@ -2,11 +2,11 @@
 
 ## Description
 
-This demo project uses a simple Keras model to predict prices for 3 separate asset classes (Gold, NASDAQ Composite Index and Bitcoin). 
+This demo project uses a Keras model to predict prices for 3 assets (Gold, NASDAQ Composite Index and Bitcoin) in different asset classes. 
 
-The project also uses the LSTM algorithm to make predictions on interest rates, gold, S&P 500, and BTC. There's also a simple GUI where the user can input their investment today and get a 3-6m PNL prediction adjusted for inflation.
+The project also uses the LSTM algorithm to make predictions on interest rates, gold, S&P 500, and BTC. There's a basic GUI where the user can input their investment today and get a 3-6m PNL prediction adjusted for inflation.
 
-Note: This is a demo to highlight scalable machine learning and deep learning. Use it to trade at your own risk. 
+Note: This is a toy project to demo scalable machine learning and deep learning. I wouldn't use it to risk real money and nor should you. Fair warning? 
 
 ## Uses
 
