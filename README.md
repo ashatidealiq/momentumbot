@@ -27,13 +27,15 @@ Note: This is a toy project to demo scalable machine learning and deep learning.
 
 First, we use yfinance to implement a tool for crawling Yahoo Finance historical data. We create DataFrames from historical data and create feature groups on Hopsworks through ***backfill-feature-group***.
 
-Second, we retrieve historical features from Hopsworks and train the first-generation models using LSTM and upload the models to Hopsworks file system through ***training-pipeline***. Below is the example for gold. As you can see predictions from deep learning can be surprisingly accurate.
-
-![output](README.assets/output.png)
+Second, we retrieve historical features from Hopsworks and train the first-generation models using LSTM and upload the models to Hopsworks file system through ***training-pipeline***. 
 
 Then we deploy ***feature-pipeline-daily*** on Modal to update the latest data to Hopsworks every working day. If there is a sufficient amount of new daily data it is necessary to retrain the model to avoid concept drift. That's why we have ***cyclical-training-pipeline*** to generate and update new models every month.
 
 Finally, infer and display prediction results with a Gradio app deployed on Hugging Face.
+
+**Casual side note...** Deep learning models can produce surprisingly accurate predictions at times. There's no strong form EMH but no walk is completely random either. But if you get something like the result we got below for gold prices though (never mind the time series) your model is most likely either overfitting to the training data or there is an even more obvious problem. 
+
+![output](README.assets/output.png)
 
 ## How to Run
 
